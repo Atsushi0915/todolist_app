@@ -44,8 +44,8 @@ export const App = () => {
   return (
     <>
       <div className="container-fluid">
-        <div className="bg-dark text-warning p-2 my-2 ">
-          <h2>TODOリスト</h2>
+        <div className="bg-dark text-warning pt-2 pb-1 px-4 my-2 ">
+          <h1>TODO_APP</h1>
         </div>
         <InputTodo todoText={todoText} 
                    onChange={onChangeTodoText} 
