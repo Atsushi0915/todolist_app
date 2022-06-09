@@ -5,7 +5,7 @@ import { ConpleteTodo } from './components/ConpleteTodo'
 import 'react-toastify/dist/ReactToastify.css';
 import { FlashMessage } from './components/FlashMessage';
 
-export const App = memo(() => {
+export const App = () => {
   const [todoText, setTodoText] = useState('')
   const [inconpleteTodos, setInconpleteTodos ] = useState([])
   const [conpleteTodos, setConpleteTodos] = useState([])
@@ -68,6 +68,10 @@ export const App = memo(() => {
     inconpleteTodos.length >= 5 && setFlashFlag('todoError')},
     [inconpleteTodos, conpleteTodos])
 
+  useEffect(() => {
+    setFlashFlag('')
+  },[inconpleteTodos, conpleteTodos])
+
 
   return (
     <>
@@ -75,8 +79,8 @@ export const App = memo(() => {
         <div className="bg-dark text-warning pt-2 pb-1 px-4 my-2 ">
           <h1>TODO_APP</h1>
         </div>
-        <FlashMessage  flashFlag={flashFlag} 
-                       setFlashFlag={setFlashFlag} />
+        
+        <FlashMessage  flashFlag={flashFlag} setFlashFlag={setFlashFlag} />
 
         <InputTodo todoText={todoText} 
                    onChange={onChangeTodoText} 
@@ -93,5 +97,5 @@ export const App = memo(() => {
       </div>
     </>
   );
-})
+}
 

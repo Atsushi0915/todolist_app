@@ -1,9 +1,11 @@
+import { memo } from "react"
 import { toast, ToastContainer } from "react-toastify"
 
-export const FlashMessage = (props) => {
- 
-  const {flashFlag, setFlashFlag } = props
-
+export const FlashMessage = memo((props) => {
+  const {flashFlag } = props
+  console.log(flashFlag)
+  console.log("レンダリング")
+  
   const flashStatas = {
     position: "top-center",
     autoClose: 5000,
@@ -60,13 +62,12 @@ export const FlashMessage = (props) => {
       break;
 
     default:
-      setFlashFlag('')
   }
-  setFlashFlag('')
+  
 
   return (
     <>
       <ToastContainer />
     </>
   )
-}
+})
