@@ -1,7 +1,7 @@
 import React from "react";
 
 export const InconpleteTodo = (props) => {
-  const {todos, onClickConplete, onClickDelete} = props
+  const {todos, onClickConplete, onClickCancel} = props
 
   return (
     <>
@@ -14,8 +14,8 @@ export const InconpleteTodo = (props) => {
               return(
                 <div key={todo} className="d-flex flex-row flex-wrap border-top pt-3 align-items-center my-2">
                   <li >{index+1} : {todo}</li>
-                  <button onClick={() => onClickConplete(index)} className="btn-sm btn-success mx-3">完了</button>
-                  <button onClick={() => onClickDelete(index)} className="btn-sm btn-danger">削除</button>
+                  <button onClick={() => onClickConplete(index)} className="btn-sm btn-outline-info mx-3">完了</button>
+                  <button onClick={() => onClickCancel(index)} className="btn-sm btn-outline-warning">取消</button>
                 </div>
               )
             })}

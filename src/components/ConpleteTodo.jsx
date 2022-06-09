@@ -2,7 +2,7 @@ import React from "react";
 
 export const ConpleteTodo = (props) => {
 
-  const {todos, onClickBack} = props
+  const {todos, onClickBack,onClickDelete} = props
 
   return (
     <>
@@ -15,7 +15,8 @@ export const ConpleteTodo = (props) => {
               return(
                 <div key={todo} className="d-flex flex-row flex-wrap border-top pt-3 align-items-center my-2">
                   <li >{index+1} : {todo}</li>
-                  <button onClick={() => {onClickBack(index)}} className="btn-sm btn-warning mx-2">戻す</button>
+                  <button onClick={() => {onClickBack(index)}} className="btn-sm btn-outline-success mx-2">戻す</button>
+                  <button onClick={() => {onClickDelete(index)}} className="btn-sm btn-outline-danger mx-2">削除</button>
                 </div>
               )
             })}

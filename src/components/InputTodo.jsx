@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 
-export const InputTodo = (props) => {
-  console.log(props)
+export const InputTodo = memo((props) => {
+  
   const { todoText, onClick, onChange, disabled } = props;
 
   return(
@@ -14,4 +14,4 @@ export const InputTodo = (props) => {
     </>
     
   )
-}
+})

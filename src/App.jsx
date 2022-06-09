@@ -1,12 +1,15 @@
-import React, {useState} from 'react'
+import React, {memo, useEffect, useState} from 'react'
 import { InconpleteTodo } from './components/InconpleteTodo'
 import { InputTodo }  from './components/InputTodo'
 import { ConpleteTodo } from './components/ConpleteTodo'
+import 'react-toastify/dist/ReactToastify.css';
+import { FlashMessage } from './components/FlashMessage';
 
-export const App = () => {
+export const App = memo(() => {
   const [todoText, setTodoText] = useState('')
   const [inconpleteTodos, setInconpleteTodos ] = useState([])
   const [conpleteTodos, setConpleteTodos] = useState([])
+  const [flashFlag, setFlashFlag] = useState('')
 
   const onChangeTodoText = (event) => {
     setTodoText(event.target.value)
@@ -16,13 +19,26 @@ export const App = () => {
     if (todoText === "") return; 
     const newTodos = [...inconpleteTodos, todoText]
     setInconpleteTodos(newTodos)
-    setTodoText('')
+    setTodoText('')  
+    if(newTodos.length >= 5){
+      setFlashFlag('todoAddAndError')
+    }else{
+      setFlashFlag('todoAdd')
+    }
   }
 
-  const onClickDelete = (index) =>{
+  const onClickCancel = (index) =>{
     const newTodos = [...inconpleteTodos]
     newTodos.splice(index, 1)
     setInconpleteTodos(newTodos) 
+    setFlashFlag('todoCancel')
+  }
+
+  const onClickDelete = (index) =>{
+    const newTodos = [...conpleteTodos]
+    newTodos.splice(index, 1)
+    setConpleteTodos(newTodos) 
+    setFlashFlag('todoDelete')
   }
 
   const onClickConplete = (index) =>{
@@ -31,6 +47,7 @@ export const App = () => {
     const newconpleteTodos = [...conpleteTodos, inconpleteTodos[index]]
     setInconpleteTodos(newinconpleteTodos)
     setConpleteTodos(newconpleteTodos)
+    setFlashFlag('todoConplete')
   }
 
   const onClickBack = (index) => {
@@ -39,7 +56,18 @@ export const App = () => {
     const newInconpleteTodos = [...inconpleteTodos, conpleteTodos[index]]
     setConpleteTodos(newConpleteTodos)
     setInconpleteTodos(newInconpleteTodos)
+    setFlashFlag('todoBack')
+    if(newInconpleteTodos.length >= 5){
+      setFlashFlag('todoBackAndError')
+    }else{
+      setFlashFlag('todoBack')
+    }
   }
+
+  useEffect(() => {
+    inconpleteTodos.length >= 5 && setFlashFlag('todoError')},
+    [inconpleteTodos, conpleteTodos])
+
 
   return (
     <>
@@ -47,23 +75,23 @@ export const App = () => {
         <div className="bg-dark text-warning pt-2 pb-1 px-4 my-2 ">
           <h1>TODO_APP</h1>
         </div>
+        <FlashMessage  flashFlag={flashFlag} 
+                       setFlashFlag={setFlashFlag} />
+
         <InputTodo todoText={todoText} 
                    onChange={onChangeTodoText} 
                    onClick={onClickAdd}
                    disabled={inconpleteTodos.length >= 5}/>
-                   
-        {inconpleteTodos.length >= 5 &&
-          <p className="text-danger h3" >・登録できるtodoは5個までだよ〜。消化しろ〜!!</p>
-        }
         
         <InconpleteTodo todos={inconpleteTodos}
                         onClickConplete={onClickConplete}
-                        onClickDelete={onClickDelete} />
+                        onClickCancel={onClickCancel} />
 
         <ConpleteTodo todos={conpleteTodos}
-                      onClickBack={onClickBack} />
+                      onClickBack={onClickBack}
+                      onClickDelete={onClickDelete} />
       </div>
     </>
   );
-}
+})
 
