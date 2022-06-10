@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { App } from './App';
 import reportWebVitals from './reportWebVitals';
-import { ToastContainer } from 'react-toastify';
+import { FlashProvider } from './providers/FlashProvider';
+import { FlashMessage } from './components/FlashMessage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <App />
+    <FlashProvider>
+      <FlashMessage />
+      <App />
+    </FlashProvider>
   </>
 );
 
