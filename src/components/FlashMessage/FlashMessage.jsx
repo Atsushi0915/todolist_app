@@ -1,12 +1,11 @@
 import React, { memo, useContext } from "react"
 import { toast, ToastContainer } from "react-toastify"
-import { FlashContext } from "../providers/FlashProvider"
+import { FlashContext } from "../../providers/FlashProvider"
 import 'react-toastify/dist/ReactToastify.css';
 
 
 export const FlashMessage = memo(() => {
   const { flashFlag } = useContext(FlashContext)
-  console.log(flashFlag)
   
   const flashStatas = {
     position: "top-center",

@@ -4,7 +4,6 @@ export const FlashContext = createContext({});
 
 export const FlashProvider = (props) => {
   const { children } = props;
-  
   const [flashFlag, setFlashFlag] = useState('')
 
   return (
