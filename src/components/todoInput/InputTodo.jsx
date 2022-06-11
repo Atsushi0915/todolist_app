@@ -50,16 +50,16 @@ export const InputTodo = memo(() => {
 
 const BAddFormDiv = "d-flex flex-row alert alert-info mb-2"
 const SAddFormDiv = styled.div`
-  background-color: #9fc2ff;
+  background-color: #cbfeff;
 `
-const BAddButton = "btn btn-outline-primary mx-2 "
+const BAddButton = "btn btn-primary mx-2 "
 const SAddButton = styled.button`
   font-size: 20px;
-  background-color: #00b7ff;
+  background-color: #08adff;
   border-radius: 15px;
   &:hover {
     cursor: pointer;
-    background-color: #01ffe6;
+    background-color: #4671fe;
   }
 `
 const BAddInput = "form-control w-50 pr-3"

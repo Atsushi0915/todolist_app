@@ -1,10 +1,13 @@
 import React from "react";
-import { TodoApp } from "./TodoApp"
-import { FlashMessage } from "./components/FlashMessage/FlashMessage";
+
+import { TodoRouter } from "./router/TodoRouter";
+import { FlashMessage } from "./components/flashMessage/FlashMessage";
 
 import { ConpleteTodoProvider } from "./providers/ConpleteTodoProvider";
 import { FlashProvider } from "./providers/FlashProvider";
 import { InconpleteTodoProvider } from "./providers/InconpleteTodoProvider";
+
+
 
 export const App = () => {
   return (
@@ -13,7 +16,7 @@ export const App = () => {
         <ConpleteTodoProvider>
           <InconpleteTodoProvider>
             <FlashMessage />
-            <TodoApp />
+            <TodoRouter />
           </InconpleteTodoProvider>
         </ConpleteTodoProvider>
       </FlashProvider>
