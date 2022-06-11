@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import styled from "styled-components";
 import { ConpleteTodoContext } from "../../providers/ConpleteTodoProvider";
 import { FlashContext } from "../../providers/FlashProvider";
 import { InconpleteTodoContext } from "../../providers/InconpleteTodoProvider";
@@ -36,24 +37,49 @@ export const ConpleteTodo = () => {
 
   return (
     <>
-      <TodoCard cardHeadColor={"#ffe135"} 
+      <TodoCard cardHeaderColor={"#ffe135"} 
                 cardBodyColor={"#fff7d8"}
                 cardTitle={'Conpleteリスト'}
                 cardMessage={`完了したタスクは${conpleteTodos.length}件です`}>
+
         {conpleteTodos.map((todo, index) => {
           return(
-            <div key={todo} className="d-flex flex-row flex-wrap border-top pt-3 align-items-center my-2">
+            <SListDiv key={todo} className={BListDiv}>
               <li >{index+1} : {todo}</li>
-              <button onClick={() => {onClickBack(index)}} className="btn-sm btn-outline-success mx-2">
+              <SBackButton onClick={() => {onClickBack(index)}} className={BBackButton}>
                 戻す
-              </button>
-              <button onClick={() => {onClickDelete(index)}} className="btn-sm btn-outline-danger mx-2">
+              </SBackButton>
+              <SDeleteButton onClick={() => {onClickDelete(index)}} className={BDeleteButton}>
                 削除
-              </button>
-            </div>
+              </SDeleteButton>
+            </SListDiv>
           )
         })}
       </TodoCard>
     </>
   )
 }
+
+// ######## styled ################################################
+
+const BListDiv = 'd-flex flex-row flex-wrap border-top pt-3 align-items-center my-2'
+const SListDiv = styled.div`
+  
+`
+
+const BBackButton = 'btn-sm btn-outline-success mx-2'
+const SBackButton = styled.button`
+  border-radius: 10px;
+  background-color: #e0ffe2;
+  font-weight: bold;
+  font-size: 11px;
+`
+
+const BDeleteButton = 'btn-sm btn-outline-danger mx-2'
+const SDeleteButton = styled.button`
+  border-radius: 10px;
+  background-color: #ffe1e1;
+  font-weight: bold;
+  font-size: 11px;
+`
+
