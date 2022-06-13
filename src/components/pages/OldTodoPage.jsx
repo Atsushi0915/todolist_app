@@ -19,5 +19,4 @@ export const OldTodoPage  = () => {
 // ######## styled ################################################
 
 const BContainerDiv = 'container-fluid';
-const SContainerDiv = styled.div`
-`
+
