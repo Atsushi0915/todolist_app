@@ -31,5 +31,7 @@ const STodoAppLink = styled(Link)`
 const BOldTodoslink = 'nav-link';
 const SOldTodoslink = styled(Link)`
   color :#ffffffe8;
+  font-size: 18px;
+  font-weight: bold;
 `
 

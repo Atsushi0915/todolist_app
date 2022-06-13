@@ -24,6 +24,11 @@ export const FlashMessage = memo(() => {
       toast.error("登録できるタスクは５件までやで！！", flashStatas)
       break;
 
+    case "allDelete":
+      flashStatas.theme = "colored"
+      toast.error("過去のタスクを全件削除しました", flashStatas)
+      break;
+
     case "todoAdd":
       flashStatas.theme = "colored"
       toast.info("新しいタスクを登録したよん！", flashStatas)

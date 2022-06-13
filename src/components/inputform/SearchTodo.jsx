@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import { SearchNameContext } from '../../providers/SearchNameProvider';
 
 
-export const SearchTodo = memo(() => {
-  
+export const SearchTodo = memo((props) => {
+  const {children} = props
+
   const { searchName, setSearchName } = useContext(SearchNameContext)
 
   const onChangeSearchName = (event) => {
@@ -19,6 +20,7 @@ export const SearchTodo = memo(() => {
                       value={searchName} 
                       onChange={onChangeSearchName} 
                       className={BSearchInput} />
+        {children}
                
       </SSearchFormDiv>
     </>
@@ -32,7 +34,7 @@ const BSearchFormDiv = "d-flex flex-row my-2"
 const SSearchFormDiv = styled.div`
 `
 
-const BSearchInput = "form-control w-50 pr-3"
+const BSearchInput = "form-control w-75 pr-3"
 const SSearchInput = styled.input`
   border-radius: 5px;
 `
