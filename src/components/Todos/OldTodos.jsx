@@ -1,21 +1,23 @@
-import React, { useContext } from "react";
+import React, { memo, useContext } from "react";
 import styled from "styled-components";
 import { OldTodoContext } from "../../providers/OldTodoProvider"
 import { SearchNameContext } from "../../providers/SearchNameProvider";
 import { SearchTodo } from "../inputform/SearchTodo";
 import { TodoCard } from "../todoCard/TodoCard"
 
-export const OldTodos = () => {
+export const OldTodos = memo(() => {
   const { oldTodos } = useContext(OldTodoContext)
   const { searchName } = useContext(SearchNameContext)
 
   const searchTodos = oldTodos.filter((value) => {
+    console.log(searchName)
+    console.log(value.includes(searchName))
     if (searchName === '') {
       return value
     } else if (value.includes(searchName)) {
       return value
     } else {
-      return []
+      return ''
     }
   })
 
@@ -40,7 +42,7 @@ export const OldTodos = () => {
       </TodoCard>
     </>
   )
-}
+})
 
 // ######## styled ################################################
 

@@ -1,6 +1,6 @@
 import React, { memo, useContext } from "react";
 import { toast, ToastContainer } from "react-toastify";
-import { FlashContext } from "../providers/FlashProvider";
+import { FlashContext } from "../../providers/FlashProvider";
 import 'react-toastify/dist/ReactToastify.css';
 
 
