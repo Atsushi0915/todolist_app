@@ -24,8 +24,8 @@ export const InputTodo = memo(() => {
       setFlashFlag('todoAddAndError')
     }else{
       setFlashFlag('todoAdd')
-    }
-  }
+    };
+  };
 
   return(
     <>
@@ -44,8 +44,8 @@ export const InputTodo = memo(() => {
         </SAddButton>
       </SAddFormDiv>
     </>
-  )
-})
+  );
+});
 
 // ######## styled ################################################
 

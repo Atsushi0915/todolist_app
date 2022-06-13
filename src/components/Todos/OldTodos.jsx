@@ -1,9 +1,9 @@
 import React, { memo, useContext } from "react";
 import styled from "styled-components";
-import { OldTodoContext } from "../../providers/OldTodoProvider"
+import { OldTodoContext } from "../../providers/OldTodoProvider";
 import { SearchNameContext } from "../../providers/SearchNameProvider";
 import { SearchTodo } from "../inputform/SearchTodo";
-import { TodoCard } from "../todoCard/TodoCard"
+import { TodoCard } from "../todoCard/TodoCard";
 
 export const OldTodos = memo(() => {
   const { oldTodos } = useContext(OldTodoContext)

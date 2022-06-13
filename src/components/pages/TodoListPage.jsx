@@ -1,9 +1,9 @@
-import React, { useContext, useEffect} from 'react'
+import React, { useContext, useEffect} from 'react';
 import styled from 'styled-components';
 
-import { InputTodo }  from '../inputform/InputTodo'
-import { InconpleteTodo } from '../todos/InconpleteTodo'
-import { ConpleteTodo } from '../todos/ConpleteTodo'
+import { InputTodo }  from '../inputform/InputTodo';
+import { InconpleteTodo } from '../todos/InconpleteTodo';
+import { ConpleteTodo } from '../todos/ConpleteTodo';
 import { Header } from '../layout/Header';
 
 import { FlashContext } from '../../providers/FlashProvider';
