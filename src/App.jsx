@@ -6,7 +6,7 @@ import { InconpleteTodoProvider } from "./providers/InconpleteTodoProvider";
 import { OldTodoProvider } from "./providers/OldTodoProvider";
 import { SearchNameProvider } from "./providers/SearchNameProvider";
 
-import { FlashMessage } from "./components/FlashMessage/FlashMessage";
+import { FlashMessage } from "./components/flashMessage/FlashMessage";
 import { TodoRouter } from "./router/TodoRouter";
 
 
