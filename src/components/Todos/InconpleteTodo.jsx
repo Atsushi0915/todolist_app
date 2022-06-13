@@ -5,11 +5,13 @@ import { FlashContext } from "../../providers/FlashProvider";
 import { InconpleteTodoContext } from "../../providers/InconpleteTodoProvider";
 import { TodoCard } from "../todoCard/TodoCard";
 
+
 export const InconpleteTodo = () => {
   
   const { inconpleteTodos, setInconpleteTodos } = useContext(InconpleteTodoContext)
   const { conpleteTodos, setConpleteTodos } = useContext(ConpleteTodoContext)
   const { setFlashFlag } = useContext(FlashContext)
+
 
   const onClickCancel = (index) =>{
     const newTodos = [...inconpleteTodos]

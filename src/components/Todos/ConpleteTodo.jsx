@@ -3,12 +3,14 @@ import styled from "styled-components";
 import { ConpleteTodoContext } from "../../providers/ConpleteTodoProvider";
 import { FlashContext } from "../../providers/FlashProvider";
 import { InconpleteTodoContext } from "../../providers/InconpleteTodoProvider";
+import { OldTodoContext } from "../../providers/OldTodoProvider";
 import { TodoCard } from "../todoCard/TodoCard";
 
 export const ConpleteTodo = () => {
 
   const { conpleteTodos, setConpleteTodos } = useContext(ConpleteTodoContext)
   const { inconpleteTodos, setInconpleteTodos } = useContext(InconpleteTodoContext)
+  const { oldTodos, setOldTodos } = useContext(OldTodoContext)
   const { setFlashFlag } = useContext(FlashContext)
 
   
@@ -29,7 +31,9 @@ export const ConpleteTodo = () => {
   const onClickDelete = (index) =>{
     const newTodos = [...conpleteTodos]
     newTodos.splice(index, 1)
+    const newOldTodos = [...oldTodos, conpleteTodos[index]]
     setConpleteTodos(newTodos) 
+    setOldTodos(newOldTodos)
 
     setFlashFlag('todoDelete')
   }

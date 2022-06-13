@@ -1,12 +1,15 @@
+import React from 'react'
 import styled from "styled-components";
 import { Header } from "../layout/Header";
+import { SearchTodo } from "../inputform/SearchTodo";
+import { OldTodos } from '../todos/OldTodos';
 
 export const OldTodoPage = () => {
   return (
     <>
       <SContainerDiv className={BContainerDiv}>
         <Header />
-        <h1>OldTodosです。</h1>
+        <OldTodos />
       </SContainerDiv>
     </>
   )

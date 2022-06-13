@@ -1,7 +1,7 @@
 import React, { useContext, useEffect} from 'react'
 import styled from 'styled-components';
 
-import { InputTodo }  from '../todoInput/InputTodo'
+import { InputTodo }  from '../inputform/InputTodo'
 import { InconpleteTodo } from '../todos/InconpleteTodo'
 import { ConpleteTodo } from '../todos/ConpleteTodo'
 import { Header } from '../layout/Header';

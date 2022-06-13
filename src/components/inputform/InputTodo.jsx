@@ -31,6 +31,7 @@ export const InputTodo = memo(() => {
     <>
       <SAddFormDiv className={BAddFormDiv}>
         <SAddInput disabled={inconpleteTodos.length >= 5} 
+                   type='text'
                    placeholder='TODOを入力' 
                    value={todoText} 
                    onChange={onChangeTodoText} 
@@ -48,15 +49,16 @@ export const InputTodo = memo(() => {
 
 // ######## styled ################################################
 
-const BAddFormDiv = "d-flex flex-row alert alert-info mb-2"
+const BAddFormDiv = "d-flex flex-row alert alert-info my-2"
 const SAddFormDiv = styled.div`
   background-color: #cbfeff;
 `
 const BAddButton = "btn btn-primary mx-2 "
 const SAddButton = styled.button`
-  font-size: 20px;
-  background-color: #08adff;
+  font-size: 18px;
+  background-color: #01829c;
   border-radius: 15px;
+  border: none;
   &:hover {
     cursor: pointer;
     background-color: #4671fe;
