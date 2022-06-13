@@ -29,7 +29,7 @@ export const TodoCard = (props) => {
   )
 }
 
-// ######## styled ##################################################
+// ######## styled #################################################
 
 const BCardDiv = 'card my-2';
 const SCardDiv = styled.div`
