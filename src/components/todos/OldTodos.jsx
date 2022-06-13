@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { OldTodoContext } from "../../providers/OldTodoProvider";
 import { SearchNameContext } from "../../providers/SearchNameProvider";
 import { SearchTodo } from "../inputform/SearchTodo";
-import { TodoCard } from "../todoCard/TodoCard";
+import { TodoCard } from "../TodoCard/TodoCard";
 
 export const OldTodos = memo(() => {
   const { oldTodos } = useContext(OldTodoContext)

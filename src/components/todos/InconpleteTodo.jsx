@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { ConpleteTodoContext } from "../../providers/ConpleteTodoProvider";
 import { FlashContext } from "../../providers/FlashProvider";
 import { InconpleteTodoContext } from "../../providers/InconpleteTodoProvider";
-import { TodoCard } from "../todoCard/TodoCard";
+import { TodoCard } from "../TodoCard/TodoCard";
 
 
 export const InconpleteTodo = () => {
