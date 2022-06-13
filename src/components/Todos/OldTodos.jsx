@@ -10,8 +10,6 @@ export const OldTodos = memo(() => {
   const { searchName } = useContext(SearchNameContext)
 
   const searchTodos = oldTodos.filter((value) => {
-    console.log(searchName)
-    console.log(value.includes(searchName))
     if (searchName === '') {
       return value
     } else if (value.includes(searchName)) {
