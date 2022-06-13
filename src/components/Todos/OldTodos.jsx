@@ -42,7 +42,7 @@ export const OldTodos = memo(() => {
   )
 })
 
-// ######## styled ################################################
+// ######## styled #################################################
 
 const SSearchMessage = styled.p`
   margin-top: 20px;

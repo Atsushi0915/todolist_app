@@ -64,7 +64,7 @@ export const ConpleteTodo = () => {
   )
 }
 
-// ######## styled #################################################
+// ######## styled ##################################################
 
 const BListDiv = 'd-flex flex-row flex-wrap border-top pt-3 align-items-center my-2'
 const SListDiv = styled.div`
