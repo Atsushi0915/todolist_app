@@ -14,6 +14,8 @@ export const OldTodos = () => {
       return value
     } else if (value.includes(searchName)) {
       return value
+    } else {
+      return []
     }
   })
 

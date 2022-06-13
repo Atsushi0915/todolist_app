@@ -31,6 +31,7 @@ export const InconpleteTodo = () => {
 
   useEffect(() => {
     inconpleteTodos.length >= 5 && setFlashFlag('todoError')},
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [inconpleteTodos, conpleteTodos])
 
   return (

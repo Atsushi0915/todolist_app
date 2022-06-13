@@ -12,6 +12,7 @@ import { ConpleteTodoContext } from '../../providers/ConpleteTodoProvider';
 
 
 
+
 export const TodoListPage = () => {
   const { setFlashFlag } = useContext(FlashContext)
   const { inconpleteTodos } = useContext(InconpleteTodoContext)
@@ -19,6 +20,7 @@ export const TodoListPage = () => {
 
   useEffect(() => {
     setFlashFlag('')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[inconpleteTodos, conpleteTodos])
 
   return (
