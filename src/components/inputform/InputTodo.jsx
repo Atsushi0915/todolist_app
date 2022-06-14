@@ -34,13 +34,14 @@ export const InputTodo = memo(() => {
                    type='text'
                    placeholder='TODOを入力' 
                    value={inconpleteTodos.length >= 5 ? 
-                          ('※ ５件以上は入力できません'):
+                          ('※ TODOは5件以上入力できません'):
                           (todoText)}
                    onChange={onChangeTodoText} 
                    inconpleteTodos={inconpleteTodos}
                    className={BAddInput} />
                
-        <SAddButton disabled={inconpleteTodos.length >= 5} 
+        <SAddButton disabled={inconpleteTodos.length >= 5 ||
+                              (!todoText || /^\s*$/.test(todoText))} 
                     onClick={onClickAdd} 
                     className={BAddButton} >
             追加
