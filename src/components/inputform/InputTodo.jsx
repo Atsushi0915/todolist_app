@@ -4,7 +4,6 @@ import { FlashContext } from '../../providers/FlashProvider';
 import { InconpleteTodoContext } from '../../providers/InconpleteTodoProvider';
 
 
-
 export const InputTodo = memo(() => {
   
   const [ todoText, setTodoText ] = useState('');
@@ -34,8 +33,11 @@ export const InputTodo = memo(() => {
         <SAddInput disabled={inconpleteTodos.length >= 5} 
                    type='text'
                    placeholder='TODOを入力' 
-                   value={todoText} 
+                   value={inconpleteTodos.length >= 5 ? 
+                          ('※ ５件以上は入力できません'):
+                          (todoText)}
                    onChange={onChangeTodoText} 
+                   inconpleteTodos={inconpleteTodos}
                    className={BAddInput} />
                
         <SAddButton disabled={inconpleteTodos.length >= 5} 
@@ -68,4 +70,6 @@ const SAddButton = styled.button`
 const BAddInput = "form-control w-50 pr-3"
 const SAddInput = styled.input`
   border-radius: 15px;
+  ${props => props.inconpleteTodos.length >= 5 && `color:#ff0000`};
+  
 `

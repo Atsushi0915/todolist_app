@@ -21,53 +21,55 @@ export const FlashMessage = memo(() => {
   
   switch(flashFlag){
     case "todoError":
-      toast.error("登録できるタスクは５件までやで！！", flashStatas)
+      toast.error("登録できるタスクは５件までやで！！", flashStatas);
       break;
 
     case "allDelete":
       flashStatas.theme = "colored"
-      toast.error("過去のタスクを全件削除しました", flashStatas)
+      toast.error("過去のタスクを全件削除しました", flashStatas);
       break;
 
     case "todoAdd":
       flashStatas.theme = "colored"
-      toast.info("新しいタスクを登録したよん！", flashStatas)
+      toast.info("新しいタスクを登録したよん！", flashStatas);
       break;
 
     case "todoAddAndError":
       flashStatas.theme = "colored"
-      toast.info("新しいタスクを登録したよん！", flashStatas)
-      toast.error("登録できるタスクは５件までやで！！", flashStatas)
+      toast.info("新しいタスクを登録したよん！", flashStatas);
+      toast.error("登録できるタスクは５件までやで！！", flashStatas);
       break;
 
     case "todoCancel":
       flashStatas.theme = "dark"
-      toast.warn("できまへんて！取り消したで・・・", flashStatas)
+      toast.warn("できまへんて！取り消したで・・・", flashStatas);
       break;
 
     case "todoDelete":
       flashStatas.theme = "colored"
-      toast.error("もうええやろ。消しとくよっ！", flashStatas)
+      toast.error("もうええやろ。消しとくよっ！", flashStatas);
       break;
 
     case "todoConplete":
       flashStatas.position = "top-right"
-      toast.info("やったでー！終わったで！！", flashStatas)
+      toast.info("やったでー！終わったで！！", flashStatas);
       break;
 
     case "todoBack":
       flashStatas.position = "bottom-right"
-      toast.success("ふふふ、戻しといたよっ・・・", flashStatas)
+      toast.success("ふふふ、戻しといたよっ・・・", flashStatas);
       break;
 
     case "todoBackAndError":
       flashStatas.position = "bottom-right"
-      toast.success("ふふふ、戻しといたよっ・・・", flashStatas)
+      toast.success("ふふふ、戻しといたよっ・・・", flashStatas);
       flashStatas.theme = "colored"
       flashStatas.position = "top-center"
-      toast.error("登録できるタスクは５件までやで！！", flashStatas)
+      toast.error("登録できるタスクは５件までやで！！", flashStatas);
       break;
-
+    case 'sampledataSet':
+      toast.success("データ入れといたよっ！", flashStatas);
+      break;
     default:
   }
   
