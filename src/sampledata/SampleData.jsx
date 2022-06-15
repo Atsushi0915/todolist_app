@@ -61,6 +61,7 @@ const STextDiv = styled.div`
 const BInputButton = "btn btn-primary mx-2 "
 const SInputButton = styled.button`
   background-color: #ff00d4;
+  border-radius: 13px;
   border: none;
   &:hover {
     cursor: pointer;

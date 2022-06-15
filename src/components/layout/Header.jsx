@@ -27,7 +27,7 @@ export const Header = () => {
 
 const BHeaderNav = 'container-fluid navbar navbar-expand-lg';
 const SHeaderNav = styled.nav`
-  background-color: #000000;
+  background-color: #1f1f1f;
 `
 const BTodoAppLink = 'navbar-brand text-warnign mx-3';
 const STodoAppLink = styled(Link)`
