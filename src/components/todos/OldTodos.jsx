@@ -7,6 +7,7 @@ import { SearchNameContext } from "../../providers/SearchNameProvider";
 import { SearchTodo } from "../inputform/SearchTodo";
 import { TodoCard } from "../TodoCard/TodoCard";
 
+
 export const OldTodos = memo(() => {
   const { oldTodos, setOldTodos } = useContext(OldTodoContext)
   const { searchName } = useContext(SearchNameContext)
@@ -28,14 +29,14 @@ export const OldTodos = memo(() => {
     if (sure) {
       setOldTodos([])
       setFlashFlag('allDelete')
-      navigate('/')
+      navigate('/todos')
     }
   }
 
   return (
     <>
-      <TodoCard cardHeaderColor={'#cc6fe4'}
-                cardBodyColor={'#f9d5fd'}
+      <TodoCard cardHeaderColor={'#af5ee192'}
+                cardBodyColor={'#f9f4fabf'}
                 cardTitle={'過去のタスク一覧'}
                 cardMessage={`過去に削除したタスクは${oldTodos.length}件です。`} >
 

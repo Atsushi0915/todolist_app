@@ -41,8 +41,8 @@ export const ConpleteTodo = () => {
 
   return (
     <>
-      <TodoCard cardHeaderColor={"#ffe135"} 
-                cardBodyColor={"#fff7d8"}
+      <TodoCard cardHeaderColor={"#64ff69a7"} 
+                cardBodyColor={"#36fdf013"}
                 cardTitle={'Conpleteリスト'}
                 cardMessage={`完了したタスクは${conpleteTodos.length}件です`}>
 

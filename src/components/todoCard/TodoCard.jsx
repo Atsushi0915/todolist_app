@@ -31,7 +31,7 @@ export const TodoCard = (props) => {
 
 // ######## styled #################################################
 
-const BCardDiv = 'card my-2';
+const BCardDiv = 'card my-1';
 const SCardDiv = styled.div`
 `
 

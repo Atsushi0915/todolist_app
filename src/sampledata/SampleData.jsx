@@ -54,8 +54,16 @@ const SSampleFormDiv = styled.div`
 
 const BTextDiv = "h4 mb-0 mx-2"
 const STextDiv = styled.div`
+  color: #ff00d4;
+  font-weight: bold;
 `
 
 const BInputButton = "btn btn-primary mx-2 "
 const SInputButton = styled.button`
+  background-color: #ff00d4;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    background-color: #660085;
+  }
 `

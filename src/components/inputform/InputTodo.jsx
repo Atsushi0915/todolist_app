@@ -53,22 +53,23 @@ export const InputTodo = memo(() => {
 
 // ######## styled ################################################
 
-const BAddFormDiv = "d-flex flex-row alert alert-info my-2"
+const BAddFormDiv = "d-flex flex-row alert alert-info my-1 py-3"
 const SAddFormDiv = styled.div`
-  background-color: #cbfeff;
+  background-color: #ffffff23;
+  border: none;
 `
-const BAddButton = "btn btn-primary mx-2 "
+const BAddButton = "btn btn-primary mx-3 "
 const SAddButton = styled.button`
   font-size: 18px;
-  background-color: #01829c;
+  background-color: #0318d7b7;
   border-radius: 15px;
   border: none;
   &:hover {
     cursor: pointer;
-    background-color: #4671fe;
+    /* background-color: #0008ff; */
   }
 `
-const BAddInput = "form-control w-50 pr-3"
+const BAddInput = "form-control w-75 "
 const SAddInput = styled.input`
   border-radius: 15px;
   ${props => props.inconpleteTodos.length >= 5 && `color:#ff0000`};

@@ -68,7 +68,7 @@ export const FlashMessage = memo(() => {
       toast.error("登録できるタスクは５件までやで！！", flashStatas);
       break;
     case 'sampledataSet':
-      toast.success("データ入れといたよっ！", flashStatas);
+      toast.success("よっと！データ入れといたよっ！", flashStatas);
       break;
     default:
   }

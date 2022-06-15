@@ -9,10 +9,8 @@ export const NavLayout = (props) => {
         <Span className="navbar-toggler-icon"></Span>
       </Button>
       <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-          <li className='nav-item'>
-            {children}
-          </li>
+        <ul className="navbar-nav ">
+          {children}
         </ul>
       </div>
     </>
@@ -20,13 +18,13 @@ export const NavLayout = (props) => {
 }
 
 const Button = styled.button`
-  background-color:#f8d304;
-  border-color:#ffffff;
+  background-color:#00e5ff;
+  border-color:#27009e;
   
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='-4 2 40 25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   &:hover{
-    background-color:#fff7cc;
-    border-color:#fff700;
+    background-color:#0008ff;
+    border-color:#0009bd;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='-4 2 40 25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(100,100,100,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   }
 `
