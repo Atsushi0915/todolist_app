@@ -37,6 +37,7 @@ export const InconpleteTodo = () => {
   return (
     <>
       <TodoCard cardHeaderColor={"#00fbff"} 
+                cardHeaderIcon={'FiEdit3'}
                 cardBodyColor={"#e9fcfe"}
                 cardTitle={'TODOリスト'}
                 cardMessage={`未完了のタスクは${inconpleteTodos.length}件です`} >

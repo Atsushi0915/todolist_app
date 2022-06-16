@@ -35,8 +35,9 @@ export const OldTodos = memo(() => {
 
   return (
     <>
-      <TodoCard cardHeaderColor={'#9d00ff92'}
-                cardBodyColor={'#f9f4fabf'}
+      <TodoCard cardHeaderColor={'#0066ffb6'}
+                cardHeaderIcon={'RiEraserLine'}
+                cardBodyColor={'#e9fcfe'}
                 cardTitle={'過去のタスク一覧'}
                 cardMessage={`過去に削除したタスクは${oldTodos.length}件です。`} >
 

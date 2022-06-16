@@ -1,31 +1,36 @@
 import React from "react";
 import styled from "styled-components";
+import { CardHeaderIcon } from "./CardHeaderIcon";
+
 
 export const TodoCard = (props) => {
   const { children, 
-          cardHeaderColor,  
+          cardHeaderColor,
+          cardHeaderIcon,  
           cardBodyColor, 
           cardTitle, 
-          cardMessage } = props
+          cardMessage } = props;
+
 
   return (
-    <SCardDiv className={BCardDiv} >
-      <SCardHeaderDiv cardHeaderColor={cardHeaderColor} className={BCardHeaderDiv} >
-        {cardTitle}
-      </SCardHeaderDiv>
-
-      <SCardBodyDiv cardBodyColor={cardBodyColor} className={BCardBodyDiv} >
-
-        <SCardMessageDiv className={BCradMessageDiv}>
-          {cardMessage}
-        </SCardMessageDiv>
-
-        <SCardListul className={BCardListUl}>
-          {children}
-        </SCardListul >
-
-      </SCardBodyDiv>
-    </SCardDiv>
+    <>
+      <SCardDiv className={BCardDiv} >
+        <SCardHeaderDiv cardHeaderColor={cardHeaderColor} 
+                        className={BCardHeaderDiv} >
+          <CardHeaderIcon cardHeaderIcon={cardHeaderIcon} />
+          {cardTitle}
+        </SCardHeaderDiv>
+        <SCardBodyDiv cardBodyColor={cardBodyColor} 
+                      className={BCardBodyDiv} >
+          <SCardMessageDiv className={BCradMessageDiv}>
+            {cardMessage}
+          </SCardMessageDiv>
+          <SCardListul className={BCardListUl}>
+            {children}
+          </SCardListul >
+        </SCardBodyDiv>
+      </SCardDiv>
+    </>
   )
 }
 

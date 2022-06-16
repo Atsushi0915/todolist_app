@@ -26,7 +26,7 @@ export const TodoListPage = () => {
 
   return (
     <>
-      {AllData.length == 0 && <SampleData />}
+      {AllData.length === 0 && <SampleData />}
       <InputTodo />
       <InconpleteTodo />
       <ConpleteTodo />
