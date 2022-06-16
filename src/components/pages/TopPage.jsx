@@ -1,6 +1,9 @@
 import React from "react";
+import { IconContext } from "react-icons";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { AiFillGithub } from "react-icons/ai";
+import Button from '@material-ui/core/Button';
 
 
 export const TopPage = () => {
@@ -8,6 +11,10 @@ export const TopPage = () => {
 
   const onClickTop = () => {
     navigate('/todos')
+  }
+
+  const onClickGitHub = () => {
+    window.open('https://github.com/Atsushi0915/todolist_app','_blank')
   }
 
   return (
@@ -22,6 +29,13 @@ export const TopPage = () => {
                        className={BTopButton}>
             リスト作成
           </STopButton>
+          <SGitHubDiv className={BGitHubDiv} >
+            <IconContext.Provider value={{ color: '#000000', size: '70px' }}>
+              <Button onClick={onClickGitHub}>
+                <AiFillGithub/>
+              </Button>
+            </IconContext.Provider>
+          </SGitHubDiv>
         </STopMessageDiv>
       </STopDiv>
     </>
@@ -75,4 +89,9 @@ const STopButton = styled.button`
     cursor: pointer;
     background-color: #00d5ff;
   }
+`
+
+const BGitHubDiv = '';
+const SGitHubDiv = styled.div`
+  margin-top: 40px;
 `

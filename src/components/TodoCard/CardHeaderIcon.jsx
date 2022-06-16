@@ -5,7 +5,6 @@ import styled from "styled-components";
 
 export const CardHeaderIcon = memo((props) => {
   const { cardHeaderIcon } = props;
-  console.log(cardHeaderIcon)
 
   return (
     <>
